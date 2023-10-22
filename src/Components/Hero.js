@@ -50,17 +50,12 @@ const HeroCanvas = () => {
     )
 }
 
-const OverlayContainer = styled.div`
-    height: 200vh;
-    margin-top: -8%;
-`
-
 const Title = styled.h3.attrs(props => ({
     style: {
         opacity: props.opacity,
     }
 }))`
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
     font-size: 8vw;
     font-weight: 600;
@@ -113,8 +108,8 @@ const Bio = styled.div.attrs(props => ({
 `
 
 const BioTextBox = styled.div`
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -125,8 +120,8 @@ const BioTextBox = styled.div`
     border-radius: 5px;
 
     @media only screen and (max-width: 1000px) { 
-        padding-top: 30px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         padding-left: 20px;
         padding-right: 20px;
 
@@ -150,7 +145,6 @@ const Overlay = () => {
 
     return (
         <Scroll html>
-        <OverlayContainer>
             <Title opacity={opacityTitle}>
                 <p>Hello World <br/>
                     I'm&nbsp;
@@ -179,7 +173,6 @@ const Overlay = () => {
                     </BioTextBox>
                 </Bio>
             </BioContainer>
-            </OverlayContainer>
         </Scroll>
     )
 }
