@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 
 import { Canvas, useFrame } from '@react-three/fiber'
@@ -29,6 +29,7 @@ const Hero = () => {
         <Canvas
             frameloop='demand'
             camera={{ fov: 10, position: [0, 0, 9] }}
+            style={{touchAction: "auto !important"}}
         >
             <HeroCanvas/>
         </Canvas>
@@ -38,10 +39,19 @@ const Hero = () => {
 export default Hero
 
 const HeroCanvas = () => {
+    const [isDesktop, setDesktop] = useState(window.innerWidth > 1000);
+    const updateMedia = () => {
+      setDesktop(window.innerWidth > 1000);
+    };
+    useEffect(() => {
+      window.addEventListener("resize", updateMedia);
+      return () => window.removeEventListener("resize", updateMedia);
+    });
+
     return (
         <>
             <OrbitControls enableZoom={false} enablePan={false} enableRotate={false}/>
-            <ScrollControls pages={2} damping={0.3} style={{paddingRight:"17px"}}>
+            <ScrollControls pages={isDesktop ? 2 : 0} damping={0.3} style={{paddingRight:"17px"}}>
                 <OceanGlobe/>
                 <Rocket/>
                 <Overlay/>
@@ -56,7 +66,6 @@ const Title = styled.h3.attrs(props => ({
     }
 }))`
     height: 70vh;
-    width: 100vw;
     font-size: 8vw;
     font-weight: 600;
     color: #e4e3e3;
@@ -134,6 +143,7 @@ const BioTextBox = styled.div`
 `
 
 const Overlay = () => {
+    const ref = useRef(null)
     const scroll = useScroll()
     const [opacityTitle, setOpacityTitle] = useState(1);
     const [opacityBio, setOpacityBio] = useState(1);

@@ -203,11 +203,11 @@ const Timeline = () => {
           <TlMajorText>
             <b style={{ fontSize: "1.2em" }}>The Hong Kong Diploma of Secondary Education</b>
             <i style={{ fontSize: "1.2em" }}>SKH Lam Woo Memorial Secondary School</i>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Acheivement:</p>
             <li>Hong Kong No. 4, Asia Top 400 - PUBG</li>
             <li>Campus League 2019 Round 4 - League of Legends</li>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Grade:</p>
             <li>5* in Mathematics</li>
             <li>5* in Information and Communication Technology</li>
@@ -229,12 +229,12 @@ const Timeline = () => {
           <TlMajorText>
             <b style={{ fontSize: "1.2em" }}>Event Assistant</b>
             <i style={{ fontSize: "1.2em" }}>Cyber Games Arena</i>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Responsibilities:</p>
             <li>Assisting with event coordination</li>
             <li>Handling event and staging equipments</li>
             <li>Establishing connection with clients and customers</li>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Skills:</p>
             <li>IT-Related Technical Proficiency</li>
             <li>On-site Marketing & Promotion</li>
@@ -256,14 +256,14 @@ const Timeline = () => {
             <b style={{ fontSize: "1.2em" }}>BEng in Electronic Engineering</b>
             <b style={{ fontSize: "1.2em" }}>Minor in Finance</b>
             <i style={{ fontSize: "1.2em" }}>The University of Hong Kong</i>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Activities:</p>
             <li>HKU Racing - Powertrain Electronics (2020-2021)</li>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Awards & Scholarships:</p>
             <li>HKUWW Exchange Scholarships</li>
             <li>HKSAR Reaching Out Award</li>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Grade:</p>
             <li>3.24 over 4.3 - CGPA</li>
           </TlMajorText>
@@ -281,12 +281,12 @@ const Timeline = () => {
           <TlMajorText>
             <b style={{ fontSize: "1.2em" }}>Student Exchange Programme</b>
             <i style={{ fontSize: "1.2em" }}>University of Leicester</i>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Modules:</p>
             <li>Corporate Finance</li>
             <li>Investment Management</li>
             <li>Statistic</li>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Activities:</p>
             <li>Travel around Europe</li>
             <li>Proud member of LCFC</li>
@@ -305,12 +305,12 @@ const Timeline = () => {
           <TlMajorText>
             <b style={{ fontSize: "1.2em" }}>Summer Internship</b>
             <i style={{ fontSize: "1.2em" }}>China Mobile International Limited</i>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Responsibilities:</p>
             <li>Enterprise Business - Industry Development Solutions</li>
             <li>Designing dedicated IoT and Networking solutions</li>
             <li>IoT and Cloud deployment for various scenario</li>
-            <hr style={{marginTop:"1em", marginBottom:"1em"}}/>
+            <br/>
             <p>Skills:</p>
             <li>Technologically Savvy</li>
             <li>Communication</li>
