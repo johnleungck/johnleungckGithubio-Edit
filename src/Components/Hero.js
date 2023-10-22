@@ -39,19 +39,9 @@ const Hero = () => {
 export default Hero
 
 const HeroCanvas = () => {
-    const [isDesktop, setDesktop] = useState(window.innerWidth > 1000);
-    const updateMedia = () => {
-      setDesktop(window.innerWidth > 1000);
-    };
-    useEffect(() => {
-      window.addEventListener("resize", updateMedia);
-      return () => window.removeEventListener("resize", updateMedia);
-    });
-
     return (
         <>
-            <OrbitControls enableZoom={false} enablePan={false} enableRotate={false}/>
-            <ScrollControls pages={isDesktop ? 2 : 0} damping={0.3} style={{paddingRight:"17px"}}>
+            <ScrollControls pages={2} damping={0.3} style={{paddingRight:"17px"}}>
                 <OceanGlobe/>
                 <Rocket/>
                 <Overlay/>
@@ -65,7 +55,10 @@ const Title = styled.h3.attrs(props => ({
         opacity: props.opacity,
     }
 }))`
-    height: 70vh;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
     font-size: 8vw;
     font-weight: 600;
     color: #e4e3e3;
@@ -77,6 +70,8 @@ const Title = styled.h3.attrs(props => ({
 `
 
 const BioContainer = styled.div`
+    margin: 0;
+    padding: 0; 
     height: 100vh;
     width: 100vw;
     display: flex;

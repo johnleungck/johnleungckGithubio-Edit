@@ -4,6 +4,7 @@ import Hero from './Components/Hero';
 import Timeline from './Components/Timeline';
 import Works from './Components/Works';
 import Contact from './Components/Contact';
+import Test from './Components/Test';
 
 const Container = styled.div`
   height: 100vh;

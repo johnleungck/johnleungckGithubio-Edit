@@ -35,81 +35,22 @@ const Container = styled.div`
   align-items: center;
 `
 
-const Title = styled.h1`
-  font-weight: 400;
-  color: white;
-  margin: 0;
-`
-
-const Form = styled.form`
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  @media only screen and (max-width: 1000px) {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-`
-
-const Input = styled.input`
-  padding: 0.8rem;
-  color: #fff;
-  background-color: #ffffff1f;
-  border: none;
-  border-radius: 5px;
-  &::placeholder {
-    color: #fff;
-  }
-`
-
-const TextArea = styled.textarea`
-  padding: 0.8rem;
-  color: #fff;
-  background-color: #ffffff1f;
-  border: none;
-  border-radius: 5px;
-  &::placeholder {
-    color: #fff;
-  }
-`
-
-const Button = styled.button`
-  background-color: #2f224b;
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: ${props => props.type === "submit" ? "pointer" : "default"};
-  border-radius: 5px;
-  padding: 0.8rem;
-`
-
 const Socials = styled.div`
-  padding-top: 1.2rem;
+  padding-top: 20px;
   align-content: space-between;
 `
 
 const SocialLink = styled.a`
-  padding: 0.6rem;
+  padding: 10px;
 `
 
-const Contact = () => {
+const Test = () => {
   return (
     <Section id="contact">
       <Canvas
         frameloop='demand'
         camera={{ fov: 10, position: [0, 0, 15] }}
       >
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          autoRotate
-          maxPolarAngle={Math.PI/2.5}
-          minPolarAngle={Math.PI/2.5}
-        />
         <Stars position={[0, 0, 1]}/>
         <RotateGlobe position={[0, 0, 1]}/>
         <ContactCanvas />
@@ -118,7 +59,7 @@ const Contact = () => {
     </Section>
   )
 }
-export default Contact
+export default Test
 
 function Stars(props) {
   const ref = useRef()
@@ -148,31 +89,9 @@ const ContactCanvas = () => {
 }
 
 const ContactOverlay = () => {
-  const ref = useRef()
-  const [success, setSuccess] = useState(false)
-  
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log("sent")
-    emailjs.sendForm('service_6jjnyh8', 'template_klnvten', ref.current, 'U1J-nXVrlwuz0IUKr').then((result) => {
-        console.log(result.text);
-        setSuccess(true)
-      }, (error) => {
-        console.log(error.text);
-        setSuccess(false)
-      });
-  }
-
   return (
     <Scroll html>
       <Container>
-        <Form ref={ref} onSubmit={handleSubmit}>
-          <Title>Contact</Title>
-          <Input placeholder='Name' name="name"/>
-          <Input placeholder='Email' name="email"/>
-          <TextArea placeholder='Write your message' name="message" rows={10}/>
-          <Button type={success ? "button" : "submit"}>{success ? "Your message has been sent. We'll get back to you soon :)" : "Send"}</Button>
-        </Form>
         <Socials>
           <SocialLink href="https://github.com/johnleungck" target="_blank" rel="noopener noreferrer"><img src={githubLogo} alt='Github' style={{height:'24px'}}/></SocialLink>
           <SocialLink href="https://www.linkedin.com/in/chung-kai-leung-809931195/" target="_blank" rel="noopener noreferrer"><img src={linkedinLogo} alt='LinkedIn' style={{height:'24px'}}/></SocialLink>
